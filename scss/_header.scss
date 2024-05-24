@@ -1,0 +1,160 @@
+.header{
+    background-color: #fff;
+    border-bottom: 1px solid #DEDEDE;
+
+    .header__container{
+        padding-top: 15px;
+        padding-bottom: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    
+        .bar{
+            display: none;
+        }
+    
+        #checkbut{
+            display: none;
+        }
+    }
+}
+
+.header__first{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 56px;
+
+    .menu{
+        display: none;
+    }
+
+    #check{
+        display: none;
+    }
+
+    .logo img{
+        width: 148px;
+    }
+
+    .nav ul{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 40px;
+    }
+
+    a{
+        color: #333333;
+        transition: all 0.5s;
+    
+        &:hover{
+            color: #13AB4E;
+        }
+    }
+    
+}
+
+.header__but{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+
+    a{
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 16px;
+        color: #333333;
+        transition: all 0.5s;
+        
+            &:hover{
+                color: #13AB4E;
+            }
+    }
+
+    .demo{
+        @extend %button;
+    }
+}   
+
+@media screen and (max-width:992px) {
+    .header__container{
+        font-size: 14px;
+    }
+
+    .header__first {
+        gap: 26px;
+        .logo img{
+            width: 115px;
+        }
+        .nav ul{
+            display: flex;
+            gap: 15px;
+    }
+    }
+
+
+    .header__but{
+        display: flex;
+        gap: 15px;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .header__container{
+        position: relative;
+    }
+    .header__first{
+        .nav{
+            display: none;
+            ul{
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                background-color: white;
+                width: 100%;
+                left: 0;
+                top: 70px;
+                
+            }
+        }
+
+        .menu{
+            display: block;
+        }
+
+        #check:checked ~ .nav{
+            display: block;
+        }
+
+        
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .header{
+        .header__container{
+            .header__but{
+                display: none;
+                position: absolute;
+                right: 0;
+                top: 65px;
+            }
+    
+            .bar{
+                display: block;
+            }
+
+            #checkbut:checked~.header__but{
+                display: block;
+            }
+        }
+    }
+
+    .header__first{
+        display: flex;
+        gap: 80px;
+    }
+}

@@ -1,0 +1,191 @@
+.hero {
+  padding-top: 25px;
+  padding-bottom: 50px;
+
+  .hero__about {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+  }
+
+  .hero__sponsor {
+    p {
+      color: #0d7d38;
+      text-align: center;
+      margin-bottom: 32px;
+    }
+
+    .hero__links {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+    }
+  }
+}
+
+.hero__info {
+  width: 570px;
+
+  h1 {
+    font-size: 48px;
+    line-height: 72px;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 16px;
+
+    span {
+      color: #13ab4e;
+    }
+  }
+
+  p {
+    font-size: 20px;
+    line-height: 36px;
+    color: #333333;
+    margin-bottom: 32px;
+  }
+}
+
+.hero__but {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+
+  .demos {
+    @extend %button;
+  }
+
+  a {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+
+    span {
+      font-weight: 500;
+      font-size: 18px;
+      color: #13ab4e;
+
+      &:hover {
+        color: #195c32;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .hero__info {
+    width: 520px;
+    h1 {
+      font-size: 40px;
+      line-height: 64px;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 32px;
+    }
+  }
+
+  .hero__img img {
+    width: 500px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .hero__info {
+    width: 480px;
+    h1 {
+      font-size: 28px;
+      line-height: 38px;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+
+  .hero__img img {
+    width: 380px;
+  }
+
+  .hero__but {
+    display: flex;
+    gap: 16px;
+
+    a {
+      display: flex;
+      gap: 6px;
+
+      span {
+        font-weight: 400;
+        font-size: 14px;
+      }
+    }
+  }
+
+  .hero__sponsor {
+    .hero__links {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 100px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero {
+
+    .hero__sponsor{
+        p{
+            font-size: 12px;
+            line-height: 18px;
+        }
+
+        .hero__links {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 8px;
+
+            img{
+                width: 100px;
+            }
+          }
+
+    }
+
+    .hero__about {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 24px;
+    }
+  }
+
+  .hero__img img {
+    width: 300px;
+  }
+
+  .hero__info {
+    width: 300px;
+    h1 {
+      font-size: 24px;
+      line-height: 36px;
+    }
+
+    p {
+      font-size: 12px;
+      line-height: 24px;
+    }
+  }
+
+  .hero__but {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+}
